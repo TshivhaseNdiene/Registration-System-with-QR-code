@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>User QR Code</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h1>User QR Code</h1>
+    <div class="card mt-4">
+        <div class="card-body">
+            <p><strong>Name:</strong> <span th:text="${user.name}"></span></p>
+            <p><strong>Email:</strong> <span th:text="${user.email}"></span></p>
+            <div>
+                <img th:src="@{'/api/' + ${user.id} + '/qr-code'}" alt="QR Code" class="img-fluid"/>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

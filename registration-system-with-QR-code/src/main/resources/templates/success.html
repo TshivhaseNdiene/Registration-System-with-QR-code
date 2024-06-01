@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registration Successful</title>
+</head>
+<body>
+<h1>Registration Successful</h1>
+<p><strong>First Name:</strong> <span th:text="${user.firstName}"></span></p>
+<p><strong>Last Name:</strong> <span th:text="${user.lastName}"></span></p>
+<p><strong>Date Of Birth:</strong> <span th:text="${user.dateOfBirth}"></span></p>
+<p><strong>Phone Number:</strong> <span th:text="${user.phoneNumber}"></span></p>
+<p><strong>Address:</strong> <span th:text="${user.address}"></span></p>
+<p>QR Code:</p>
+<img th:src="@{'/' + ${user.qrCode}}" alt="QR Code"/>
+</body>
+</html>
